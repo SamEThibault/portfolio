@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         )}
 
         {step >= 1 && (
-          <pre className="cli-output">
+          <pre className="cli-output cli-links">
             <a
               href="https://www.linkedin.com/in/samuelemardthibault/"
               target="_blank"
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
         )}
 
         {step >= 4 && (
-          <pre className="cli-output">
+          <pre className="cli-output cli-links">
             <a
               href="https://github.com/SamEThibault/498-pwrAPI-ref"
               target="_blank"

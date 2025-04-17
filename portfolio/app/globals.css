@@ -66,6 +66,8 @@ body {
 }
 
 .cli-output {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin: 0.5rem 0 1rem;
   padding-left: 1rem;
   border-left: 2px solid #3e3d32;
@@ -91,11 +93,26 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .cli-links {
+    white-space: normal;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem 1rem;
+  }
+  .cli-links a {
+    margin: 0;
+    display: inline-block;
+  }
+}
+
 .cli-output a {
-  color: #66d9ef;           
-  text-decoration: none;    
-  border-bottom: 1px dashed #66d9ef; 
-  cursor: pointer;        
+  color: #66d9ef;
+  display: inline;
+  text-decoration: underline dashed #66d9ef;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  cursor: pointer;       
 }
 
 .cli-output a:hover {
