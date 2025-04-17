@@ -10,16 +10,58 @@ const Home: NextPage = () => {
   const [step, setStep] = useState(0);
   const shellRef = useRef<HTMLDivElement>(null);
 
-  const finishAbout = () => setStep(1);
-  const finishExperience = () => setStep(2);
+  const finishList = () => setStep(1);
+  const finishAbout = () => setStep(2);
+  const finishExperience = () => setStep(3);
 
   return (
-    <div className={`cli-container ${step >= 2 ? "show-blink" : ""}`}>
+    <div className={`cli-container ${step >= 3 ? "show-blink" : ""}`}>
       <div className="cli-shell" ref={shellRef}>
         {step >= 0 && (
           <div className="cli-prompt">
             <span className="cli-prefix">sam@portfolio:~$ </span>
             <div className={step > 0 ? "hide-cursor" : ""}>
+              <Typewriter
+                onInit={(tw) => {
+                  tw.typeString("ls")
+                    .pauseFor(300)
+                    .callFunction(finishList)
+                    .start();
+                }}
+                options={{ cursor: "_", delay: 50 }}
+              />
+            </div>
+          </div>
+        )}
+
+        {step >= 1 && (
+          <pre className="cli-output">
+            <a
+              href="https://linkedin.com/in/sam"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            {"  "}
+            <a href="https://github.com/sam" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            {"  "}
+            <a href="https://devpost.com/sam" target="_blank" rel="noreferrer">
+              Devpost
+            </a>
+            {"  "}
+            <a href="https://devpost.com/sam" target="_blank" rel="noreferrer">
+              Email
+            </a>
+          </pre>
+        )}
+
+        {step >= 1 && (
+          <div className="cli-prompt">
+            <span className="cli-prefix">sam@portfolio:~$ </span>
+            <div className={step > 1 ? "hide-cursor" : ""}>
               <Typewriter
                 onInit={(tw) => {
                   tw.typeString("cat about.py")
@@ -33,7 +75,7 @@ const Home: NextPage = () => {
           </div>
         )}
 
-        {step >= 1 && (
+        {step >= 2 && (
           <pre className="cli-output">
             {aboutLines.map((line, i) => (
               <div key={i}>{line}</div>
@@ -41,13 +83,13 @@ const Home: NextPage = () => {
           </pre>
         )}
 
-        {step >= 1 && (
+        {step >= 2 && (
           <div className="cli-prompt">
             <span className="cli-prefix">sam@portfolio:~$ </span>
-            <div className={step > 1 ? "hide-cursor" : ""}>
+            <div className={step > 2 ? "hide-cursor" : ""}>
               <Typewriter
                 onInit={(tw) => {
-                  tw.typeString("list experience")
+                  tw.typeString("sudo list experience --relevant")
                     .pauseFor(300)
                     .callFunction(finishExperience)
                     .start();
@@ -58,7 +100,7 @@ const Home: NextPage = () => {
           </div>
         )}
 
-        {step >= 2 && (
+        {step >= 3 && (
           <pre className="cli-output">
             {experienceLines.map((line, i) => (
               <div key={i}>{line}</div>
@@ -66,14 +108,14 @@ const Home: NextPage = () => {
           </pre>
         )}
 
-        {step >= 2 && (
+        {step >= 3 && (
           <div className="cli-prompt">
             <span className="cli-prefix">sam@portfolio:~$ </span>
             <Typewriter
               onInit={(tw) => {
                 tw.typeString("")
                   .pauseFor(300)
-                  .callFunction(() => setStep(3))
+                  .callFunction(finishExperience)
                   .start();
               }}
               options={{ cursor: "_", delay: 50 }}

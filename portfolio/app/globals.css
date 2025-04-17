@@ -90,3 +90,15 @@ body {
     white-space: pre;
   }
 }
+
+.cli-output a {
+  color: #66d9ef;           
+  text-decoration: none;    
+  border-bottom: 1px dashed #66d9ef; 
+  cursor: pointer;        
+}
+
+.cli-output a:hover {
+  text-decoration: underline; 
+  border-bottom: none;
+}
