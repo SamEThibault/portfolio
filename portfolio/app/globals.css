@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cli-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: #272822;
+  color: #f8f8f2;
+  font-family: "Fira Code", monospace;
+}
+
+.cli-shell {
+  flex: 1;
+  overflow: auto;
+  overflow-x: auto;
+  padding: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.cli-prompt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.5rem 0;
+  min-width: 0;
+}
+
+.cli-prefix {
+  color: #66d9ef;
+  margin-right: 0.25rem;
+}
+
+.cli-prompt > .cli-prefix,
+.cli-prompt > div {
+  min-width: 0;         
+  white-space: normal;     
+}
+
+.cli-output {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #3e3d32;
+}
+
+.hide-cursor .Typewriter__cursor {
+  visibility: hidden;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .cli-shell {
+    white-space: pre;
+  }
+}
