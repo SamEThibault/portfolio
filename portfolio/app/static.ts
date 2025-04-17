@@ -17,7 +17,7 @@ export const aboutLines = [
   
 export const experienceLines = [
     "|----------------|---------------------|--------------------|",
-    "|    Date        |       Company       |         Role       |",
+    "|      Date      |       Company       |        Role        |",
     "|----------------|---------------------|--------------------|",
     "| 2024-2025      | Smith School of     | Research Assistant |",
     "|                | Business, Queen's   |                    |",
@@ -25,6 +25,7 @@ export const experienceLines = [
     "| 2023-2024      | Centre for Advanced | Software Developer |",
     "|                | Computing           | Intern             |",
     "|----------------|---------------------|--------------------|",
-    "| 2022-2025      | Self-employed       | ",
+    "| 2022-2025      | Self-employed       | Computer Science   |",
+    "|                |                     | Tutor              |",
     "|----------------|---------------------|--------------------|",
   ];

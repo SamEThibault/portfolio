@@ -37,22 +37,22 @@ const Home: NextPage = () => {
         {step >= 1 && (
           <pre className="cli-output">
             <a
-              href="https://linkedin.com/in/sam"
+              href="https://www.linkedin.com/in/samuelemardthibault/"
               target="_blank"
               rel="noreferrer"
             >
               LinkedIn
             </a>
             {"  "}
-            <a href="https://github.com/sam" target="_blank" rel="noreferrer">
+            <a href="https://github.com/SamEThibault" target="_blank" rel="noreferrer">
               GitHub
             </a>
             {"  "}
-            <a href="https://devpost.com/sam" target="_blank" rel="noreferrer">
+            <a href="https://devpost.com/SamEThibault?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank" rel="noreferrer">
               Devpost
             </a>
             {"  "}
-            <a href="https://devpost.com/sam" target="_blank" rel="noreferrer">
+            <a href="mailto:sam5thibault@gmail.com" target="_blank" rel="noreferrer">
               Email
             </a>
           </pre>
