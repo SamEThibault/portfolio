@@ -3,7 +3,7 @@ export const aboutLines = [
     "    def __init__(self):",
     '        self.name = "Samuel Emard-Thibault"',
     '        self.email = "sam5thibault@gmail.com"',
-    '        self.role = "Incoming Production Engineer @ Meta"',
+    '        self.role = "Ads Production Engineer @ Meta"',
     '        self.education = "BASc Computer Engineering, Queen\'s University (ON, Canada)"\n\n',
     '     def print_intro(self):',
     '        print("Hi there, welcome to my portfolio! The clickable links for the socials are above. Thanks for stopping by :)")\n\n',
