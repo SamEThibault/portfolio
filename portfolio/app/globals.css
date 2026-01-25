@@ -26,8 +26,7 @@ body {
 }
 
 .cli-container {
-  position: fixed;
-  inset: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: #272822;
